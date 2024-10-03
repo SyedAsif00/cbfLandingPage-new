@@ -1,4 +1,5 @@
 import CheckIcon from "@/assets/check.svg";
+import { twMerge } from "tailwind-merge";
 const pricingTiers = [
   {
     title: "Free",
@@ -54,12 +55,14 @@ export const Pricing = () => {
   return (
     <section className="py-24">
       <div className="container">
-        <h2 className="section-title">Pricing</h2>
-        <p className="section-description mt-5">
-          Free forever. Upgrade for unlimited tasks, better security, and
-          exclusive features.
-        </p>
-        <div>
+        <div className="section-heading">
+          <h2 className="section-title">Pricing</h2>
+          <p className="section-description mt-5">
+            Free forever. Upgrade for unlimited tasks, better security, and
+            exclusive features.
+          </p>
+        </div>
+        <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end  lg-justify-center">
           {pricingTiers.map(
             ({
               title,
@@ -70,7 +73,10 @@ export const Pricing = () => {
               features,
             }) => (
               <div
-                className="p-10 border border-[#f1f1f1] rounded-3xl shadow-[0_7px_14px_#eaeaea]"
+                className={twMerge(
+                  "p-10 border border-[#f1f1f1] rounded-3xl shadow-[0_7px_14px_#eaeaea] max-w-xs w-full",
+                  inverse == true && "border-black bg-black text-white/60"
+                )}
                 key=""
               >
                 <div className="flex justify-between">

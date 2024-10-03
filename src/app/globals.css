@@ -25,4 +25,7 @@
   .section-description {
     @apply text-center text-[22px] leading-[30px] tracking-tight text-[#010d3e];
   }
+  .section-heading {
+    @apply max-w-[540px] mx-auto;
+  }
 }
