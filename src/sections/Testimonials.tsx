@@ -127,7 +127,7 @@ export const Testimonials = () => {
           <h2 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6 mt-5">
             What our users say
           </h2>
-          <p className="section-description text-3xl mt-5">
+          <p className="section-description mt-5 mb-[10px] md:mb-[80px]">
             From seamless carbon tracking to impactful reduction strategies, our
             tool has become essential for sustainability-focused users
             worldwide.
