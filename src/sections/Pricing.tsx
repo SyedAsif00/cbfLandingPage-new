@@ -1,3 +1,4 @@
+import CheckIcon from "@/assets/check.svg";
 const pricingTiers = [
   {
     title: "Free",
@@ -49,7 +50,63 @@ const pricingTiers = [
     ],
   },
 ];
-
 export const Pricing = () => {
-  return null;
+  return (
+    <section className="py-24">
+      <div className="container">
+        <h2 className="section-title">Pricing</h2>
+        <p className="section-description mt-5">
+          Free forever. Upgrade for unlimited tasks, better security, and
+          exclusive features.
+        </p>
+        <div>
+          {pricingTiers.map(
+            ({
+              title,
+              monthlyPrice,
+              popular,
+              buttonText,
+              inverse,
+              features,
+            }) => (
+              <div
+                className="p-10 border border-[#f1f1f1] rounded-3xl shadow-[0_7px_14px_#eaeaea]"
+                key=""
+              >
+                <div className="flex justify-between">
+                  <h3 className="text-lg font-bold text-black/50 ">{title}</h3>
+                  {popular === true && (
+                    <div className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20">
+                      <span className="bg-[linear-gradient(to_right,#dd7ddf,#e1cd86,#bbcb92,#71c2ef,#3bffff,#dd7ddf)] text-transparent bg-clip-text font-medium">
+                        Popular
+                      </span>
+                    </div>
+                  )}
+                </div>
+                <div className="flex items-baseline gap-1 mt-[30px]">
+                  <span className="text-4xl font-bold tracking-tighter leading-none">
+                    ${monthlyPrice}
+                  </span>
+                  <span className="font-bold tracking-tight text-black/50">
+                    /month
+                  </span>
+                </div>
+                <button className="btn btn-primary w-full mt-[30px]">
+                  {buttonText}
+                </button>
+                <ul className="flex flex-col gap-5 mt-8">
+                  {features.map((feature, index) => (
+                    <li className="text-sm flex items-center gap-4" key={index}>
+                      <CheckIcon className="h-6 w-6" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )
+          )}
+        </div>
+      </div>
+    </section>
+  );
 };
