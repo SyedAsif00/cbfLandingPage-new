@@ -5,8 +5,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
-import sustraxFuelImg from "@/assets/Screenshot (3).png";
-import SustraxElectricityImg from "@/assets/Screenshot (5).png";
+import sustraxFuelImg from "@/assets/Screenshot (5).png";
+// import SustraxElectricityImg from "@/assets/Screenshot (5).png";
 
 export const ProductShowcase = () => {
   const progressCircle = useRef<SVGSVGElement>(null);
@@ -57,7 +57,7 @@ export const ProductShowcase = () => {
               <Image src={sustraxFuelImg} alt="Sustrax Fuel Image" />
             </SwiperSlide>
             <SwiperSlide>
-              <Image src={SustraxElectricityImg} alt="Sustrax Main Image" />
+              <Image src={sustraxFuelImg} alt="Sustrax Main Image" />
             </SwiperSlide>
             {/* Add more slides if needed */}
           </Swiper>
