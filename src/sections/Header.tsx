@@ -27,7 +27,7 @@ export const Header = () => {
               <a href="#">Carbon Footprint</a>
               <a href="#">Updates</a>
               <a href="#">Help</a>
-              <button className="">get for free</button>
+              <button className="btn btn-primary">get for free</button>
             </nav>
           </div>
         </div>
