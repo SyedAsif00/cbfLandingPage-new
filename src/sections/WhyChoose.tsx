@@ -87,7 +87,7 @@ export const WhyChoose = () => {
               key={index}
               className="border border-gray-200 rounded-lg bg-white p-8 shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-2"
             >
-              <h3 className="text-lg font-semibold text-transparent bg-gradient-to-r from-gray-700 via-gray-500 to-gray-300 bg-clip-text mb-4">
+              <h3 className="section-title text-[24px] font-semibold text-transparent bg-gradient-to-r from-gray-700 via-gray-500 to-gray-300 bg-clip-text mb-4">
                 {feature.title}
               </h3>
               <p className="text-gray-500 leading-relaxed mb-4">
